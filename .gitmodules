@@ -1,0 +1,4 @@
+[submodule "FF-CPP-SDK"]
+	path = FF-CPP-SDK
+	url = https://github.com/FF-CPP/FF-CPP-SDK
+	branch = main

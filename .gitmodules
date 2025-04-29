@@ -2,3 +2,6 @@
 	path = FF-CPP-SDK
 	url = https://github.com/FF-CPP/FF-CPP-SDK
 	branch = main
+[submodule "API"]
+	path = API
+	url = https://github.com/SurrenderAtFifteen/API

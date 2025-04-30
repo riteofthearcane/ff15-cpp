@@ -33,3 +33,9 @@
 
 # VS Generates
 .vs/*
+
+# VS Code Generates
+.vscode/*
+
+# Build files
+/Empyrean/**/*

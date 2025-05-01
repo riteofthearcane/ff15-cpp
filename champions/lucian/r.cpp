@@ -97,7 +97,7 @@ namespace empyrean
                 move_pos = adjust_pos + cast_data_.direction * (ver_dist * dir);
             }
 
-            api->get_hud_manager()->get_cursor_logic()->right_click_move(&move_pos, false);
+            orbwalker->move_to(move_pos);
             return true;
         }
 

@@ -104,6 +104,7 @@
     <ClInclude Include="api\structs.h" />
     <ClInclude Include="champions/lucian/lucian.h" />
     <ClInclude Include="champions/lucian/r.h" />
+    <ClInclude Include="champions/lucian/e.h" />
     <ClInclude Include="common/nearest_enemy_tracker.h" />
     <ClInclude Include="common/spell_lock_manager.h" />
     <ClInclude Include="components.h" />
@@ -114,12 +115,14 @@
   <ItemGroup>
     <ClCompile Include="champions/lucian/lucian.cpp" />
     <ClCompile Include="champions/lucian/r.cpp" />
+    <ClCompile Include="champions/lucian/e.cpp" />
     <ClCompile Include="champions/lucian/on_game_update.cpp" />
     <ClCompile Include="champions/lucian/on_draw.cpp" />
     <ClCompile Include="champions/lucian/menu.cpp" />
     <ClCompile Include="common/nearest_enemy_tracker.cpp" />
     <ClCompile Include="common/spell_lock_manager.cpp" />
     <ClCompile Include="common/event_manager.cpp" />
+
 
     <ClCompile Include="main.cpp" />
   </ItemGroup>

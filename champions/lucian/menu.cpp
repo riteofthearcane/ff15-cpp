@@ -10,6 +10,7 @@ namespace empyrean
     void Lucian::CreateMenu()
     {
         menu->add_key(kMenuIdSemiR, "Semi R", 'R');
+        menu->add_key(kMenuIdQueueE, "Queue E", 'T');
     }
 }
 

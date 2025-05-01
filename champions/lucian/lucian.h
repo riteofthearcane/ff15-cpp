@@ -21,6 +21,7 @@ namespace empyrean
 
     private:
         static constexpr char kMenuIdSemiR[] = "SemiRKey";
+        static constexpr char kMenuIdQueueE[] = "QueueEKey";
 
         Lucian();
         static void CreateMenu();
@@ -28,6 +29,7 @@ namespace empyrean
         static std::unique_ptr<Lucian> instance;
 
         class RHandler;
+        class EHandler;
     };
 
 } // namespace empyrean

@@ -20,6 +20,7 @@ namespace empyrean
     {
         event_manager->add_on_process_spell(OnProcessSpell);
         event_manager->add_on_execute_cast_frame(OnExecuteCastFrame);
+        event_manager->add_on_game_update(OnGameUpdate);
     }
 
     void SpellLockManager::OnProcessSpell(AIBaseCommon *sender, SpellCastInfo *spell_cast_info)
@@ -55,7 +56,24 @@ namespace empyrean
         invokes_[spell_cast_info->get_spell_data()->get_name()] = current_time + latency + DELAY_BUFFER;
     }
 
-    // --- Static Public Methods Implementation ---
+    void SpellLockManager::OnGameUpdate()
+    {
+        // Expire spells that are no longer valid
+        for (auto it = invokes_.begin(); it != invokes_.end();)
+        {
+            if (it->second < api->get_riot_clock()->get_time())
+            {
+                it = invokes_.erase(it);
+            }
+            else
+            {
+                ++it;
+            }
+        }
+    }
+
+
+
 
     bool SpellLockManager::ShouldCastSpell(int slot)
     {

@@ -1,6 +1,7 @@
 #include "lucian.h"
 #include "../../components.h"
 #include "r.h"
+#include "common/spell_lock_manager.h"
 
 namespace empyrean
 {
@@ -13,7 +14,12 @@ namespace empyrean
         }
 
         orbwalker->block_move(false);
-        
+
+        if (!SpellLockManager::GetInstance()->ShouldCast())
+        {
+            return;
+        }
+
         if (menu->get<bool>(kMenuIdSemiR) && Lucian::RHandler::GetInstance()->InvokeSemiR())
         {
             return;

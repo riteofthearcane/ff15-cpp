@@ -34,8 +34,10 @@ namespace empyrean
 
         SpellLockManager();
 
+        static void OnGameUpdate();
         static void OnProcessSpell(AIBaseCommon *sender, SpellCastInfo *spell_cast_info);
         static void OnExecuteCastFrame(AIBaseCommon *sender, SpellCastInfo *spell_cast_info);
+
 
         static std::unique_ptr<SpellLockManager> instance;
 

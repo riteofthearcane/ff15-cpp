@@ -38,7 +38,8 @@ namespace empyrean
                 }
 
                 menu = menu_api->create_menu(GetMenuId(), GetMenuName(), local_player->get_square_texture());
-                ts = api->get_api<TargetSelector::TargetSelectorConstructor>("TargetSelector")->create(menu);
+                const auto sub_menu = menu->add_sub_menu("TargetSelector", "Target Selector");
+                ts = api->get_api<TargetSelector::TargetSelectorConstructor>("TargetSelector")->create(sub_menu);
 
                 kSupportedChampions[local_player->get_char_name()]();
                 api->get_chat_console()->print_chat("[+] Empyrean loaded!");

@@ -17,10 +17,12 @@ namespace empyrean
         if (Lucian::RHandler::GetInstance()->InvokeAutoFollow())
         {
             orbwalker->block_move(true);
+            orbwalker->block_attack(true);
             return;
         }
 
         orbwalker->block_move(false);
+        orbwalker->block_attack(false);
 
         if (!SpellLockManager::GetInstance()->ShouldCast())
         {
